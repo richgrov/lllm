@@ -1,5 +1,7 @@
 def main():
-    print("Hello from lllm!")
+    file = open("dataset.txt", 'r')
+    vocab = set(file.read())
+    print(vocab)
 
 
 if __name__ == "__main__":
