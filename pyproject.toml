@@ -1,0 +1,7 @@
+[project]
+name = "lllm"
+version = "0.1.0"
+description = "Super unique um little large language model that does shakespeare stuff and folds arms epicly"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
