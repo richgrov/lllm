@@ -1,12 +1,15 @@
 def main():
     file = open("dataset.txt", 'r')
-    text = file.read()
-    spliceIndex = int(len(text) * 0.9)
+    shakespear = file.read()
+    spliceIndex = int(len(shakespear) * 0.9)
 
-    first = text[:spliceIndex]
-    last = text[spliceIndex:]
+    first = shakespear[:spliceIndex]
+    last = shakespear[spliceIndex:]
 
-    vocab = set(text)
+    vocab = set(shakespear)
+    for idx in range(len(shakespear)):
+        print(shakespear[idx-31:idx+32])
+    print(vocab)
 
 
 if __name__ == "__main__":
