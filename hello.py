@@ -1,3 +1,5 @@
+import random as rand
+
 def main():
     file = open("dataset.txt", 'r')
     shakespear = file.read()
@@ -5,10 +7,20 @@ def main():
 
     first = shakespear[:spliceIndex]
     last = shakespear[spliceIndex:]
-
+    
     vocab = set(shakespear)
-    for idx in range(len(shakespear)):
-        print(shakespear[idx-31:idx+32])
+    
+    randomized_vocab_vectors = {}
+    
+    for character in vocab:
+        random_vec = []
+        for vec_idx in range(63):
+            random_vec.append(rand.uniform(-1.0, 1.0))
+        randomized_vocab_vectors[character] = random_vec
+    
+    # for idx in range(len(shakespear)):
+    #     print(shakespear[idx-31:idx+32])
+    print(randomized_vocab_vectors)
     print(vocab)
 
 
