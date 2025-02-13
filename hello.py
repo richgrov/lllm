@@ -1,9 +1,12 @@
 import random as rand
 
+TRAIN_SPLIT = 0.9
+CONTEXT_WINDOW_SIZE = 64
+
 def main():
     file = open("dataset.txt", 'r')
     shakespear = file.read()
-    spliceIndex = int(len(shakespear) * 0.9)
+    spliceIndex = int(len(shakespear) * TRAIN_SPLIT)
 
     first = shakespear[:spliceIndex]
     last = shakespear[spliceIndex:]
